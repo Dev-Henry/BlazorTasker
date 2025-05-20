@@ -1,0 +1,26 @@
+﻿
+
+<div class="alert @CssClass border border-1 border-dark">
+    <h4>@Title</h4>
+    <div>@DisplayMessage</div>
+</div>
+
+
+@code {
+    //summary 
+    //the message to display in the message box
+    //
+
+    [Parameter, EditorRequired]
+    public string DisplayMessage { get; set; } = "";
+
+    [Parameter]
+    public string Title { get; set; } = "";
+
+    ///<summary>
+    ///the CSS class to apply to the message box. Defaults alert-success
+    /// //</summary>
+    [Parameter]
+    public string CssClass { get; set; } = "alert-success";
+
+}
